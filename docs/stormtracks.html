@@ -60,6 +60,83 @@ nb_path: "01_stormtracks.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="storm.derivative" class="doc_header"><code>storm.derivative</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/storm.py#L346" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>storm.derivative</code>(<strong><code>variable</code></strong>, <strong><code>N</code></strong>=<em><code>20</code></em>, <strong><code>dim</code></strong>=<em><code>''</code></em>, <strong><code>order</code></strong>=<em><code>1</code></em>)</p>
+</blockquote>
+<p>Calculates the first and second derivative in dimension
+of choice, applying a harmonic regression.
+See Benestad et al. (2006)</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="storm._calc_dX" class="doc_header"><code>storm._calc_dX</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/storm.py#L377" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>storm._calc_dX</code>(<strong><code>data</code></strong>, <strong><code>N</code></strong>, <strong><code>order</code></strong>)</p>
+</blockquote>
+<p>Calculation of the derivative using harmonic regression (Fourier fit)</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="storm._harmonicRegression" class="doc_header"><code>storm._harmonicRegression</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/storm.py#L336" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>storm._harmonicRegression</code>(<strong><code>data</code></strong>, <strong><code>N</code></strong>)</p>
+</blockquote>
+<p>Returns Fourier coefficients</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Harmonic-regression">Harmonic regression<a class="anchor-link" href="#Harmonic-regression"> </a></h2><p>Concept of harmonic regression</p>
@@ -93,7 +170,7 @@ nb_path: "01_stormtracks.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fb0dc10fac0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7fc32fecdbe0&gt;]</pre>
 </div>
 
 </div>
@@ -241,7 +318,7 @@ nb_path: "01_stormtracks.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7fb0da837a30&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7fc32fd97af0&gt;</pre>
 </div>
 
 </div>
@@ -354,7 +431,7 @@ nb_path: "01_stormtracks.ipynb"
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.legend.Legend at 0x7fb0da803d90&gt;</pre>
+<pre>&lt;matplotlib.legend.Legend at 0x7fc32fe99e20&gt;</pre>
 </div>
 
 </div>
@@ -460,7 +537,7 @@ INFO:
  longitude: &#39;lon&#39;
  latitude: &#39;lat&#39;
 
- 60%|██████    | 3/5 [00:00&lt;00:00, 24.22it/s]</pre>
+ 60%|██████    | 3/5 [00:00&lt;00:00, 24.47it/s]</pre>
 </div>
 </div>
 
@@ -475,8 +552,8 @@ INFO:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 5/5 [00:00&lt;00:00, 23.63it/s]
-100%|██████████| 5/5 [00:00&lt;00:00, 24.93it/s]</pre>
+<pre>100%|██████████| 5/5 [00:00&lt;00:00, 23.56it/s]
+ 60%|██████    | 3/5 [00:00&lt;00:00, 24.34it/s]</pre>
 </div>
 </div>
 
@@ -491,7 +568,7 @@ INFO:
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>
+<pre>100%|██████████| 5/5 [00:00&lt;00:00, 23.97it/s]
 </pre>
 </div>
 </div>
@@ -526,7 +603,7 @@ INFO:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x7fb0d9f22be0&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x7fc32f401190&gt;]</pre>
 </div>
 
 </div>
@@ -578,7 +655,7 @@ INFO:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fb0d9c93f40&gt;</pre>
+<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fc32f3bc280&gt;</pre>
 </div>
 
 </div>
@@ -623,7 +700,7 @@ INFO:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fb0da7fe220&gt;</pre>
+<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fc32f03f250&gt;</pre>
 </div>
 
 </div>
@@ -668,7 +745,7 @@ INFO:
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fb0d8a52340&gt;</pre>
+<pre>&lt;xarray.plot.facetgrid.FacetGrid at 0x7fc32de766a0&gt;</pre>
 </div>
 
 </div>
