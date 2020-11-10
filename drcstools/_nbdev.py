@@ -2,9 +2,11 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"storm": "01_stormtracks.ipynb"}
+index = {"logger": "00_storm_object.ipynb",
+         "storm": "00_storm_object.ipynb"}
 
-modules = ["storm.py"]
+modules = ["storm.py",
+           "derivative.py"]
 
 doc_url = "https://florianboergel.github.io/drcstools/"
 

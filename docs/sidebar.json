@@ -1,6 +1,7 @@
 {
   "drcstools": {
     "Overview": "/",
-    "Stormtracks": "stormtracks.html"
+    "Stormtracks": "storm_object.html",
+    "Derivatives": "derivatives.html"
   }
 }

@@ -11,7 +11,10 @@ entries:
       url: /
     - output: web,pdf
       title: Stormtracks
-      url: stormtracks.html
+      url: storm_object.html
+    - output: web,pdf
+      title: Derivatives
+      url: derivatives.html
     output: web
     title: drcstools
   output: web
