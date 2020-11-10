@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: drcstools
       url: core.html
+    - output: web,pdf
+      title: Title
+      url: stormtracks.html
     output: web
     title: drcstools
   output: web

@@ -2,7 +2,8 @@
 > For data analysis
 
 
-This file will become your README and also the index of your documentation.
+- Stormtracks
+    * Follow Benestad et al. (2006)
 
 ## Install
 
