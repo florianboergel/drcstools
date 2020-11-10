@@ -10,10 +10,7 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: drcstools
-      url: core.html
-    - output: web,pdf
-      title: Title
+      title: Stormtracks
       url: stormtracks.html
     output: web
     title: drcstools
