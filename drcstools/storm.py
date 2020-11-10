@@ -28,9 +28,7 @@ except:
 
 # Cell
 class storm():
-
-    def __init__(self, filename="", ds=None, anomaly = True, **kwargs):
-        """The constructor for storm track class. Initialize a storm instance.
+    """The constructor for storm track class. Initialize a storm instance.
 
         If filename is given, try to load it directly.
         Arguments to the load function can be passed as key=value argument.
@@ -42,7 +40,8 @@ class storm():
                 xarray dataset
             anomaly: bool
                 calculates anomaly in time
-        """
+    """
+    def __init__(self, filename="", ds=None, anomaly = True, **kwargs):
 
         self._anomaly = anomaly
 
