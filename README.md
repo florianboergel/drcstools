@@ -166,7 +166,7 @@ obj.set_up(force = True)
 
 
 ```python
-obj._derivative("slp", N = 10, dim = "lon") 
+obj.derivative("slp", N = 10, dim = "lon") 
 ```
 
      60%|██████    | 3/5 [00:00<00:00, 24.43it/s]

@@ -63,9 +63,9 @@ class storm():
 
     # Imported methods
 
-    from .derivative import _derivative
-    from .derivative import _harmonicRegression
-    from .derivative import _calc_dX
+    from .derivative import derivative
+    from .derivative import harmonicRegression
+    from .derivative import calc_dX
 
     def __repr__(self):
         try:

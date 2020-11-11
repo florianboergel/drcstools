@@ -3,7 +3,10 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"logger": "00_storm_object.ipynb",
-         "storm": "00_storm_object.ipynb"}
+         "storm": "00_storm_object.ipynb",
+         "harmonicRegression": "01_derivatives.ipynb",
+         "derivative": "01_derivatives.ipynb",
+         "calc_dX": "01_derivatives.ipynb"}
 
 modules = ["storm.py",
            "derivative.py"]
