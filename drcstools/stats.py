@@ -5,6 +5,7 @@ __all__ = ['regression', 'time', 'noise', 'data_vars', 'coords', 'dataset', 'ind
 # Cell
 import xarray as xr
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Cell
 def regression(data, index):
