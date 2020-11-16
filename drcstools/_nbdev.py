@@ -7,10 +7,21 @@ index = {"logger": "00_storm_object.ipynb",
          "harmonicRegression": "01_derivatives.ipynb",
          "derivative": "01_derivatives.ipynb",
          "calc_dX": "01_derivatives.ipynb",
-         "regression": "02_stats.ipynb"}
+         "regression": "02_stats.ipynb",
+         "time": "02_stats.ipynb",
+         "noise": "02_stats.ipynb",
+         "data_vars": "02_stats.ipynb",
+         "coords": "02_stats.ipynb",
+         "dataset": "02_stats.ipynb",
+         "rotated_grid_transform": "03_helper_functions.ipynb",
+         "transform_calendar": "03_helper_functions.ipynb",
+         "read_netcdfs": "03_helper_functions.ipynb",
+         "adjust_lon_lat": "03_helper_functions.ipynb"}
 
 modules = ["storm.py",
-           "derivative.py"]
+           "derivative.py",
+           "stats.py",
+           "helper_functions.py"]
 
 doc_url = "https://florianboergel.github.io/drcstools/"
 

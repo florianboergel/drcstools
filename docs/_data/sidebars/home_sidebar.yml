@@ -18,6 +18,9 @@ entries:
     - output: web,pdf
       title: stats
       url: stats.html
+    - output: web,pdf
+      title: helper_functions
+      url: helper_functions.html
     output: web
     title: drcstools
   output: web

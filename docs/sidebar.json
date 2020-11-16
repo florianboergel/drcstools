@@ -3,6 +3,7 @@
     "Overview": "/",
     "Stormtracks": "storm_object.html",
     "Derivatives": "derivatives.html",
-    "stats": "stats.html"
+    "stats": "stats.html",
+    "helper_functions": "helper_functions.html"
   }
 }
