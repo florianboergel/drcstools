@@ -6,7 +6,8 @@ index = {"logger": "00_storm_object.ipynb",
          "storm": "00_storm_object.ipynb",
          "harmonicRegression": "01_derivatives.ipynb",
          "derivative": "01_derivatives.ipynb",
-         "calc_dX": "01_derivatives.ipynb"}
+         "calc_dX": "01_derivatives.ipynb",
+         "regression": "02_stats.ipynb"}
 
 modules = ["storm.py",
            "derivative.py"]

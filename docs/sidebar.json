@@ -2,6 +2,7 @@
   "drcstools": {
     "Overview": "/",
     "Stormtracks": "storm_object.html",
-    "Derivatives": "derivatives.html"
+    "Derivatives": "derivatives.html",
+    "stats": "stats.html"
   }
 }

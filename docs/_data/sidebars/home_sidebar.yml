@@ -15,6 +15,9 @@ entries:
     - output: web,pdf
       title: Derivatives
       url: derivatives.html
+    - output: web,pdf
+      title: stats
+      url: stats.html
     output: web
     title: drcstools
   output: web
