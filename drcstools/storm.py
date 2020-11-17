@@ -162,14 +162,7 @@ class storm():
             raise ValueError(errmsg)
 
     def read_xarray(self, ds):
-        """
-        Read an existing xarray data set.
 
-        Parameter:
-        ----------
-            ds: data set
-                Valid xarray data set.
-        """
         if self.ds is None:
             if not isinstance(ds, xr.core.dataset.Dataset):
                 errmsg = 'ds has to be a xarray data set!'
@@ -189,26 +182,6 @@ class storm():
                force=False,
                write=True
     ):
-        """
-        Prepares the dataset for storm tracking. Does consistency checks
-        and tests if all required information is available. Sets (automatically
-        or manually) internal variables and dimensions.
-        Parameters
-        ----------
-            time_name : string, optional
-                Name of time dimension. The default is None.
-            longitude_name : string, optional
-                Name of longitude dimension. The default is None.
-            latitude_name : string, optional
-                Name of latitude dimension. The default is None.
-            force=False: bool, optional
-                Skip some consistency checks.
-            write=True: bool, optional
-                Print name of dimensions.
-        Returns
-        -------
-            None.
-        """
 
         # set dimensions
         if time_name is None:
