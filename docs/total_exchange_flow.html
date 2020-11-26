@@ -62,6 +62,111 @@ nb_path: "04_total_exchange_flow.ipynb"
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/file_manager.py</span> in <span class="ansi-cyan-fg">_acquire_with_cache_info</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    197</span>             <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 198</span><span class="ansi-red-fg">                 </span>file <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_cache<span class="ansi-blue-fg">[</span>self<span class="ansi-blue-fg">.</span>_key<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">    199</span>             <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/lru_cache.py</span> in <span class="ansi-cyan-fg">__getitem__</span><span class="ansi-blue-fg">(self, key)</span>
+<span class="ansi-green-intense-fg ansi-bold">     52</span>         <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>_lock<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 53</span><span class="ansi-red-fg">             </span>value <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_cache<span class="ansi-blue-fg">[</span>key<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">     54</span>             self<span class="ansi-blue-fg">.</span>_cache<span class="ansi-blue-fg">.</span>move_to_end<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">KeyError</span>: [&lt;class &#39;netCDF4._netCDF4.Dataset&#39;&gt;, (&#39;https://thredds-iow.io-warnemuende.de/thredds/dodsC/Persian_Gulf/IOW-THREDDS-Persian_Gulf_PG_TR_11_2020-11-11-11.nc&#39;,), &#39;r&#39;, ((&#39;clobber&#39;, True), (&#39;diskless&#39;, False), (&#39;format&#39;, &#39;NETCDF4&#39;), (&#39;persist&#39;, False))]
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">OSError</span>                                   Traceback (most recent call last)
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/file_manager.py</span> in <span class="ansi-cyan-fg">_acquire_with_cache_info</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>                     kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;mode&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_mode
+<span class="ansi-green-fg">--&gt; 204</span><span class="ansi-red-fg">                 </span>file <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_opener<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    205</span>                 <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_mode <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;w&#34;</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">netCDF4/_netCDF4.pyx</span> in <span class="ansi-cyan-fg">netCDF4._netCDF4.Dataset.__init__</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-green-fg">netCDF4/_netCDF4.pyx</span> in <span class="ansi-cyan-fg">netCDF4._netCDF4._ensure_nc_success</span><span class="ansi-blue-fg">()</span>
+
+<span class="ansi-red-fg">OSError</span>: [Errno -68] NetCDF: I/O failure: b&#39;https://thredds-iow.io-warnemuende.de/thredds/dodsC/Persian_Gulf/IOW-THREDDS-Persian_Gulf_PG_TR_11_2020-11-11-11.nc&#39;
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-6931a15c9e1a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># ds = xr.open_dataset(&#34;/silod5/boergel/model_exp/baltic-past/balt-ergom-past-8nm-skag-v01-r01_951/ocean_day3d.nc&#34;, use_cftime = True)</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>ds <span class="ansi-blue-fg">=</span> xr<span class="ansi-blue-fg">.</span>open_dataset<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;https://thredds-iow.io-warnemuende.de/thredds/dodsC/Persian_Gulf/IOW-THREDDS-Persian_Gulf_PG_TR_11_2020-11-11-11.nc&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/api.py</span> in <span class="ansi-cyan-fg">open_dataset</span><span class="ansi-blue-fg">(filename_or_obj, group, decode_cf, mask_and_scale, decode_times, autoclose, concat_characters, decode_coords, engine, chunks, lock, cache, drop_variables, backend_kwargs, use_cftime)</span>
+<span class="ansi-green-intense-fg ansi-bold">    499</span>             engine <span class="ansi-blue-fg">=</span> _get_default_engine<span class="ansi-blue-fg">(</span>filename_or_obj<span class="ansi-blue-fg">,</span> allow_remote<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    500</span>         <span class="ansi-green-fg">if</span> engine <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;netcdf4&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 501</span><span class="ansi-red-fg">             store = backends.NetCDF4DataStore.open(
+</span><span class="ansi-green-intense-fg ansi-bold">    502</span>                 filename_or_obj<span class="ansi-blue-fg">,</span> group<span class="ansi-blue-fg">=</span>group<span class="ansi-blue-fg">,</span> lock<span class="ansi-blue-fg">=</span>lock<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>backend_kwargs
+<span class="ansi-green-intense-fg ansi-bold">    503</span>             )
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(cls, filename, mode, format, group, clobber, diskless, persist, lock, lock_maker, autoclose)</span>
+<span class="ansi-green-intense-fg ansi-bold">    356</span>             netCDF4<span class="ansi-blue-fg">.</span>Dataset<span class="ansi-blue-fg">,</span> filename<span class="ansi-blue-fg">,</span> mode<span class="ansi-blue-fg">=</span>mode<span class="ansi-blue-fg">,</span> kwargs<span class="ansi-blue-fg">=</span>kwargs
+<span class="ansi-green-intense-fg ansi-bold">    357</span>         )
+<span class="ansi-green-fg">--&gt; 358</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> cls<span class="ansi-blue-fg">(</span>manager<span class="ansi-blue-fg">,</span> group<span class="ansi-blue-fg">=</span>group<span class="ansi-blue-fg">,</span> mode<span class="ansi-blue-fg">=</span>mode<span class="ansi-blue-fg">,</span> lock<span class="ansi-blue-fg">=</span>lock<span class="ansi-blue-fg">,</span> autoclose<span class="ansi-blue-fg">=</span>autoclose<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    359</span> 
+<span class="ansi-green-intense-fg ansi-bold">    360</span>     <span class="ansi-green-fg">def</span> _acquire<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> needs_lock<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, manager, group, mode, lock, autoclose)</span>
+<span class="ansi-green-intense-fg ansi-bold">    312</span>         self<span class="ansi-blue-fg">.</span>_group <span class="ansi-blue-fg">=</span> group
+<span class="ansi-green-intense-fg ansi-bold">    313</span>         self<span class="ansi-blue-fg">.</span>_mode <span class="ansi-blue-fg">=</span> mode
+<span class="ansi-green-fg">--&gt; 314</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>format <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>ds<span class="ansi-blue-fg">.</span>data_model
+<span class="ansi-green-intense-fg ansi-bold">    315</span>         self<span class="ansi-blue-fg">.</span>_filename <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>ds<span class="ansi-blue-fg">.</span>filepath<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    316</span>         self<span class="ansi-blue-fg">.</span>is_remote <span class="ansi-blue-fg">=</span> is_remote_uri<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>_filename<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ansi-cyan-fg">ds</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    365</span>     <span class="ansi-blue-fg">@</span>property
+<span class="ansi-green-intense-fg ansi-bold">    366</span>     <span class="ansi-green-fg">def</span> ds<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 367</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">return</span> self<span class="ansi-blue-fg">.</span>_acquire<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    368</span> 
+<span class="ansi-green-intense-fg ansi-bold">    369</span>     <span class="ansi-green-fg">def</span> open_store_variable<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">,</span> var<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/netCDF4_.py</span> in <span class="ansi-cyan-fg">_acquire</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    359</span> 
+<span class="ansi-green-intense-fg ansi-bold">    360</span>     <span class="ansi-green-fg">def</span> _acquire<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> needs_lock<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 361</span><span class="ansi-red-fg">         </span><span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>_manager<span class="ansi-blue-fg">.</span>acquire_context<span class="ansi-blue-fg">(</span>needs_lock<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> root<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    362</span>             ds <span class="ansi-blue-fg">=</span> _nc4_require_group<span class="ansi-blue-fg">(</span>root<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_group<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_mode<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    363</span>         <span class="ansi-green-fg">return</span> ds
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/contextlib.py</span> in <span class="ansi-cyan-fg">__enter__</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    111</span>         <span class="ansi-green-fg">del</span> self<span class="ansi-blue-fg">.</span>args<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>kwds<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>func
+<span class="ansi-green-intense-fg ansi-bold">    112</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">--&gt; 113</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">return</span> next<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>gen<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    114</span>         <span class="ansi-green-fg">except</span> StopIteration<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    115</span>             <span class="ansi-green-fg">raise</span> RuntimeError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;generator didn&#39;t yield&#34;</span><span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">from</span> <span class="ansi-green-fg">None</span>
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/file_manager.py</span> in <span class="ansi-cyan-fg">acquire_context</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    184</span>     <span class="ansi-green-fg">def</span> acquire_context<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">,</span> needs_lock<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Context manager for acquiring a file.&#34;&#34;&#34;</span>
+<span class="ansi-green-fg">--&gt; 186</span><span class="ansi-red-fg">         </span>file<span class="ansi-blue-fg">,</span> cached <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_acquire_with_cache_info<span class="ansi-blue-fg">(</span>needs_lock<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    187</span>         <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    188</span>             <span class="ansi-green-fg">yield</span> file
+
+<span class="ansi-green-fg">~/miniconda3/envs/py3/lib/python3.8/site-packages/xarray/backends/file_manager.py</span> in <span class="ansi-cyan-fg">_acquire_with_cache_info</span><span class="ansi-blue-fg">(self, needs_lock)</span>
+<span class="ansi-green-intense-fg ansi-bold">    202</span>                     kwargs <span class="ansi-blue-fg">=</span> kwargs<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    203</span>                     kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;mode&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_mode
+<span class="ansi-green-fg">--&gt; 204</span><span class="ansi-red-fg">                 </span>file <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>_opener<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>self<span class="ansi-blue-fg">.</span>_args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">    205</span>                 <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>_mode <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">&#34;w&#34;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    206</span>                     <span class="ansi-red-fg"># ensure file doesn&#39;t get overriden when opened again</span>
+
+<span class="ansi-red-fg">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 

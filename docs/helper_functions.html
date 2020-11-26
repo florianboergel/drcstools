@@ -47,7 +47,7 @@ nb_path: "03_helper_functions.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="rotated_grid_transform" class="doc_header"><code>rotated_grid_transform</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L10" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rotated_grid_transform</code>(<strong><code>grid_in</code></strong>, <strong><code>option</code></strong>, <strong><code>SP_coor</code></strong>)</p>
+<h4 id="rotated_grid_transform" class="doc_header"><code>rotated_grid_transform</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>rotated_grid_transform</code>(<strong><code>grid_in</code></strong>, <strong><code>option</code></strong>, <strong><code>SP_coor</code></strong>)</p>
 </blockquote>
 <p>rotated pole</p>
 
@@ -72,7 +72,7 @@ nb_path: "03_helper_functions.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="transform_calendar" class="doc_header"><code>transform_calendar</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L63" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>transform_calendar</code>(<strong><code>ds</code></strong>, <strong><code>timedim</code></strong>=<em><code>'time'</code></em>, <strong><code>calendarname</code></strong>=<em><code>'proleptic_gregorin'</code></em>)</p>
+<h4 id="transform_calendar" class="doc_header"><code>transform_calendar</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L64" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>transform_calendar</code>(<strong><code>ds</code></strong>, <strong><code>timedim</code></strong>=<em><code>'time'</code></em>, <strong><code>calendarname</code></strong>=<em><code>'proleptic_gregorin'</code></em>)</p>
 </blockquote>
 <p>Changes attributes of xarray dataset. Use in
 combination with xr.open_dataset([...], decode_time=False)
@@ -104,7 +104,7 @@ Returns: ds</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="read_netcdfs" class="doc_header"><code>read_netcdfs</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L78" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>read_netcdfs</code>(<strong><code>files</code></strong>, <strong><code>dim</code></strong>, <strong><code>transform_func</code></strong>, <strong><code>transform_calendar</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="read_netcdfs" class="doc_header"><code>read_netcdfs</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L79" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>read_netcdfs</code>(<strong><code>files</code></strong>, <strong><code>dim</code></strong>, <strong><code>transform_func</code></strong>, <strong><code>transform_calendar</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 <p>Reads multiples netcdfs files. Should be used when open_mfdatasets
 is to slow.</p>
@@ -138,7 +138,7 @@ transform_calendar : name of calendar (see function transform_calendar())</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="adjust_lon_lat" class="doc_header"><code>adjust_lon_lat</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L115" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>adjust_lon_lat</code>(<strong><code>ds</code></strong>, <strong><code>lon_name</code></strong>, <strong><code>lat_name</code></strong>, <strong><code>reverse</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="adjust_lon_lat" class="doc_header"><code>adjust_lon_lat</code><a href="https://github.com/florianboergel/drcstools/tree/master/drcstools/helper_functions.py#L116" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>adjust_lon_lat</code>(<strong><code>ds</code></strong>, <strong><code>lon_name</code></strong>, <strong><code>lat_name</code></strong>, <strong><code>reverse</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>Adjusts longitude from 0 to 360 to -180 to 180
 and reverses lattiude.
