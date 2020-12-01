@@ -11,19 +11,22 @@ entries:
       url: /
     - output: web,pdf
       title: Stormtracks
-      url: storm_object.html
+      url: /storm_object
     - output: web,pdf
       title: Derivatives
-      url: derivatives.html
+      url: /derivatives
     - output: web,pdf
       title: stats
-      url: stats.html
+      url: /stats
     - output: web,pdf
       title: helper_functions
-      url: helper_functions.html
+      url: /helper_functions
     - output: web,pdf
       title: Title
-      url: total_exchange_flow.html
+      url: /total_exchange_flow
+    - output: web,pdf
+      title: Storm detection
+      url: /cci
     output: web
     title: drcstools
   output: web

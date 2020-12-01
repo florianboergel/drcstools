@@ -11,12 +11,14 @@ index = {"logger": "00_storm_object.ipynb",
          "rotated_grid_transform": "03_helper_functions.ipynb",
          "transform_calendar": "03_helper_functions.ipynb",
          "read_netcdfs": "03_helper_functions.ipynb",
-         "adjust_lon_lat": "03_helper_functions.ipynb"}
+         "adjust_lon_lat": "03_helper_functions.ipynb",
+         "stormdetection": "05_cci.ipynb"}
 
 modules = ["storm.py",
            "derivative.py",
            "stats.py",
-           "helper_functions.py"]
+           "helper_functions.py",
+           "cci.py"]
 
 doc_url = "https://florianboergel.github.io/drcstools/"
 

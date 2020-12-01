@@ -100,7 +100,7 @@ def read_netcdfs(files, dim, transform_func, transform_calendar=None):
             calendar = False
         else:
             calendar = True
-        with xr.open_dataset(path, decode_times = calendar) as ds:
+        with xr.open_dataset(path, decode_times = calendar, use_cftime = True) as ds:
             if transform_calendar is not None:
                 ds[dim].attrs['calendar'] = transform_calendar
                 ds = xr.decode_cf(ds)
