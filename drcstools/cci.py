@@ -9,22 +9,33 @@ import matplotlib.pyplot as plt
 
 # Cell
 from .derivative import *
-
+from .storm import *
 
 def stormdetection(stormobj, slpname = "slp", pmax = 100000):
 
-    stormtrack.derivative(slpname, N = 10, dim = stormobj._get_name_longitude())
-    stormtrack.derivative(slpname, N = 10, dim = stormobj._get_name_latitude())
+    stormobj.derivative(slpname, N = 20, dim = stormobj._get_name_longitude(), order = 1)
+    stormobj.derivative(slpname, N = 20, dim = stormobj._get_name_latitude(), order = 1)
 
+    stormobj.derivative(slpname, N = 20, dim = stormobj._get_name_longitude(), order = 2)
+    stormobj.derivative(slpname, N = 20, dim = stormobj._get_name_latitude(), order = 2)
 
-    zero_crossings_x = xr.where(xr.ufuncs.signbit(stormtrack.ds.ddlonslp).astype(int).diff("lon") != 0, 1, 0)
-    zero_crossings_y = xr.where(xr.ufuncs.signbit(stormtrack.ds.ddlatslp).astype(int).diff("lat") != 0, 1, 0)
-
+    zero_crossings_x = xr.where(xr.ufuncs.signbit(stormobj.ds["dd{}{}".format(stormobj._get_name_longitude(),
+                                                                                slpname)]).astype(int).diff("lon") != 0, 1, 0)
+    zero_crossings_y = xr.where(xr.ufuncs.signbit(stormobj.ds["dd{}{}".format(stormobj._get_name_latitude(),
+                                                                                slpname)]).astype(int).diff("lat") != 0, 1, 0)
     zero_crossings = xr.where((zero_crossings_x == 1) & (zero_crossings_y == 1), 1, 0)
 
-    dP = 0.5 * (stormobj.ds.ddlonslp + stormobj.ds.ddlatslp)
+    dP = 0.5 * (stormobj.ds["dd{}{}".format(stormobj._get_name_longitude(), slpname)] + stormobj.ds["dd{}{}".format(stormobj._get_name_latitude(), slpname)])
+
     Pzonal = dP.mean([stormobj._get_name_time(), stormobj._get_name_latitude()])
 
-    lows = stormobj.ds[slpname].where(zero_crossings == 1).where(dP - Pzonal > 1)
-    lows = lows.where(lows < 100000)
-    return lows
+    lows = stormobj.ds[slpname].where(zero_crossings == 1).where(dP - Pzonal < 0)
+    dP = dP.where(lows < pmax)
+    lows = lows.where(lows < pmax)
+
+    stormobj.ds["lows"] = lows
+    stormobj.ds["dP"] = dP
+    return stormobj
+
+
+# def stormtracking(storm)

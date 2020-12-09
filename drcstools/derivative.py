@@ -67,7 +67,6 @@ def calc_dX(self, data, N, order):
 
     anbn = self.harmonicRegression(data[mask], N)
 
-
     Wi = 2 * np.pi / T
 
     dp = 0
@@ -80,8 +79,6 @@ def calc_dX(self, data, N, order):
             dp = dp + (Wi**2 * (-anbn[i,0]*np.cos(Wi*i*t) - anbn[i,1]*np.sin(Wi*i*t)))
     else:
         print("Your selection of order {} is not possible. Only 1th and 2nd derivative possible.")
-
-
 
     tmp = data.copy()
     tmp[mask] = dp
