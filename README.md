@@ -9,6 +9,7 @@
 - derivative
     * Calculates first and second derivative following Gill (1981)
 - stats
+    * spatial mean added
     * regression function for regression maps and more
 - helper_functions
     * reading netcdf files using xarray
