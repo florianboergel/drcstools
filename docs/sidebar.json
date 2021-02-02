@@ -1,11 +1,11 @@
 {
   "drcstools": {
     "Overview": "/",
-    "Stormtracks": "/storm_object",
-    "Derivatives": "/derivatives",
-    "stats": "/stats",
-    "helper_functions": "/helper_functions",
-    "Title": "/total_exchange_flow",
-    "Storm detection": "/cci"
+    "Stormtracks": "storm_object.html",
+    "Derivatives": "derivatives.html",
+    "stats": "stats.html",
+    "helper_functions": "helper_functions.html",
+    "Title": "total_exchange_flow.html",
+    "Storm detection": "cci.html"
   }
 }

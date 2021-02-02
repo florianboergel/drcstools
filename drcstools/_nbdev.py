@@ -8,13 +8,16 @@ index = {"logger": "00_storm_object.ipynb",
          "derivative": "01_derivatives.ipynb",
          "calc_dX": "01_derivatives.ipynb",
          "regression": "02_stats.ipynb",
+         "mean2": "02_stats.ipynb",
+         "corr2": "02_stats.ipynb",
          "rotated_grid_transform": "03_helper_functions.ipynb",
          "transform_calendar": "03_helper_functions.ipynb",
          "read_netcdfs": "03_helper_functions.ipynb",
          "adjust_lon_lat": "03_helper_functions.ipynb",
          "measure": "03_helper_functions.ipynb",
          "calculate_area_t": "03_helper_functions.ipynb",
-         "stormdetection": "05_cci.ipynb"}
+         "stormdetection": "05_cci.ipynb",
+         "stormdetection2": "05_cci.ipynb"}
 
 modules = ["storm.py",
            "derivative.py",

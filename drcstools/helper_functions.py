@@ -69,17 +69,17 @@ def transform_calendar(ds,
     return ds
 
 # Cell
-def read_netcdfs(files, dim, transform_func, transform_calendar=None):
+def read_netcdfs(files, dim, transform_func, transform_calendar=None, cftime = True):
     """Reads multiples netcdfs files. Should be used when open_mfdatasets is to slow."""
     def process_one_path(path):
         if transform_calendar is not None:
             calendar = False
         else:
             calendar = True
-        with xr.open_dataset(path, decode_times = calendar, use_cftime = True) as ds:
+        with xr.open_dataset(path, decode_times = calendar, use_cftime = cftime) as ds:
             if transform_calendar is not None:
                 ds[dim].attrs['calendar'] = transform_calendar
-                ds = xr.decode_cf(ds)
+                ds = xr.decode_cf(ds, use_cftime = cftime)
             if transform_func is not None:
                 ds = transform_func(ds)
             ds.load()
