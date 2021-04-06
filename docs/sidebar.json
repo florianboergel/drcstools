@@ -6,6 +6,7 @@
     "stats": "stats.html",
     "helper_functions": "helper_functions.html",
     "Title": "total_exchange_flow.html",
-    "Storm detection": "cci.html"
+    "Storm detection": "cci.html",
+    "read_data": "read_data.html"
   }
 }

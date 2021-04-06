@@ -11,19 +11,21 @@ index = {"logger": "00_storm_object.ipynb",
          "mean2": "02_stats.ipynb",
          "corr2": "02_stats.ipynb",
          "rotated_grid_transform": "03_helper_functions.ipynb",
-         "transform_calendar": "03_helper_functions.ipynb",
-         "read_netcdfs": "03_helper_functions.ipynb",
          "adjust_lon_lat": "03_helper_functions.ipynb",
-         "measure": "03_helper_functions.ipynb",
-         "calculate_area_t": "03_helper_functions.ipynb",
+         "guess_bounds": "03_helper_functions.ipynb",
+         "quadrant_area": "03_helper_functions.ipynb",
+         "grid_cell_areas": "03_helper_functions.ipynb",
          "stormdetection": "05_cci.ipynb",
-         "stormdetection2": "05_cci.ipynb"}
+         "stormdetection2": "05_cci.ipynb",
+         "transform_calendar": "07_read_data.ipynb",
+         "read_netcdfs": "07_read_data.ipynb"}
 
 modules = ["storm.py",
            "derivative.py",
            "stats.py",
            "helper_functions.py",
-           "cci.py"]
+           "cci.py",
+           "read_data.py"]
 
 doc_url = "https://florianboergel.github.io/drcstools/"
 

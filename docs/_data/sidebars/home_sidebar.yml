@@ -27,6 +27,9 @@ entries:
     - output: web,pdf
       title: Storm detection
       url: cci.html
+    - output: web,pdf
+      title: read_data
+      url: read_data.html
     output: web
     title: drcstools
   output: web
