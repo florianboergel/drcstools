@@ -26,8 +26,8 @@ def stormdetection(stormobj, slpname = "slp", pmax = 100000):
     stormobj.derivative(slpname, N = 20, dim = lat, order = 2)
 
     stormobj.ds['area_t'] = ((lat, lon),
-                            calculate_area_t(lon = stormobj.ds[lon].values,
-                                             lat = stormobj.ds[lat].values))
+                            grid_cell_areas(lon1d = stormobj.ds[lon].values,
+                                             lat1d = stormobj.ds[lat].values))
 
     zero_crossings_x = xr.where(xr.ufuncs.signbit(stormobj.ds["dd{}{}".format(lon, slpname)]).astype(int).diff("lon") != 0, 1, 0)
     zero_crossings_y = xr.where(xr.ufuncs.signbit(stormobj.ds["dd{}{}".format(lat, slpname)]).astype(int).diff("lat") != 0, 1, 0)
